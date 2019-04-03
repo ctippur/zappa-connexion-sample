@@ -2,12 +2,12 @@
 
 
 # Create a virtual env
-python3 -m venv --without-pip myvenv
-source myvenv/bin/activate
-curl https://bootstrap.pypa.io/get-pip.py | python
-deactivate
-source myvenv/bin/activate
-pip install -r requirements.txt
+   * python3 -m venv --without-pip myvenv
+   * source myvenv/bin/activate
+   * curl https://bootstrap.pypa.io/get-pip.py | python
+   * deactivate
+   * source myvenv/bin/activate
+   * pip install -r requirements.txt
 
 # Test server locally
 python -m swagger_server.app
