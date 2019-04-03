@@ -10,8 +10,8 @@
    * pip install -r requirements.txt
 
 # Test server locally
-python -m swagger_server.app
-curl -X GET "http://0.0.0.0:5000/" -H "accept: text/plain"
+   * python -m swagger_server.app
+   * curl -X GET "http://0.0.0.0:5000/" -H "accept: text/plain"
 
 # Deploy to zappa
 zappa deploy dev
