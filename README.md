@@ -13,8 +13,12 @@
    * python -m swagger_server.app
    * curl -X GET "http://0.0.0.0:5000/" -H "accept: text/plain"
 
+# Swagger link
+   You can also check the swagger link here.
+   * http://0.0.0.0:5000/ui/
+
 # Deploy to zappa
 zappa deploy dev
 
 # Test zappa
-curl -X GET "https://um8wz2hhyh.execute-api.us-east-1.amazonaws.com/dev/" -H "accept: text/plain"
+curl -X GET "<endpoint>/dev/" -H "accept: text/plain"
