@@ -6,7 +6,7 @@ Basic example of a resource server
 import time
 import sys,os
 sys.path.append(os.getcwd() + '/swagger_server')
-
+from flask_cors import CORS
 import connexion
 import six
 from werkzeug.exceptions import Unauthorized
@@ -56,6 +56,7 @@ def say_hello() -> int:
     return int(time.time())
 
 if __name__ == '__main__':
+    CORS(app.app)
     app.add_api('openapi.yaml')
     app.run(debug=True)
 
