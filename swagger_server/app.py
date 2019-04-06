@@ -10,13 +10,17 @@ sys.path.append(os.getcwd() + '/swagger_server')
 import connexion
 import six
 from werkzeug.exceptions import Unauthorized
-
+import logging
 from jose import JWTError, jwt
 
 JWT_ISSUER = 'com.zalando.connexion'
 JWT_SECRET = 'change_this'
 JWT_LIFETIME_SECONDS = 600
 JWT_ALGORITHM = 'HS256'
+app = connexion.FlaskApp(__name__, specification_dir='swagger/')
+logging.basicConfig()
+logger = logging.getLogger(__name__)
+logger.setLevel(logging.DEBUG)
 
 
 def generate_token(user_id):
@@ -51,8 +55,7 @@ def _current_timestamp() -> int:
 def say_hello() -> int:
     return int(time.time())
 
-app = connexion.FlaskApp(__name__, specification_dir='swagger/')
 if __name__ == '__main__':
     app.add_api('openapi.yaml')
-    app.run()
+    app.run(debug=True)
 

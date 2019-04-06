@@ -5,6 +5,8 @@
         "profile_name": "default",
         "project_name": "new",
         "runtime": "python3.6",
-        "s3_bucket": "zappa-qkprmb1sb"
+        "s3_bucket": "zappa-qkprmb1sb",
+        "log_level": "DEBUG",
+        "debug": true
     }
 }
