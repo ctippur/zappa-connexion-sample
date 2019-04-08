@@ -21,4 +21,4 @@
 zappa deploy dev
 
 # Test zappa
-curl -X GET "<endpoint>/dev/" -H "accept: text/plain"
+curl -X GET ```http://<endpoint>/dev/``` -H "accept: text/plain"
